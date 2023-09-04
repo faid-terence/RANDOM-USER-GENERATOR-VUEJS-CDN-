@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Div should have same id as the same we mounted our data in app.js -->
+    <div id="app">
+        <img :class="gender" v-bind:src="picture" alt="">
+        <h1>{{firstName}} {{lastName}} </h1>
+        <h3>{{email}}</h3>
+        <button v-on:click="getUser()" :class="gender">Generate User</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./App.js"></script>
+</body>
+
+</html>
